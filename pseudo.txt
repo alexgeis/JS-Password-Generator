@@ -1,0 +1,74 @@
+0) DEFINE VARIABLES
+
+var lowercaseChar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var uppercaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var numericChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '-', '.', '~', '|', '<', '>', '=', '-', '_', '/', ':', ';', '?', '[', ']', '{', '}', '~'];
+
+1) user clicks button
+2) prompt - # of characters
+
+    var characters = prompt("How many characters would you like in your password?")
+3) user input, store user input value as a variable
+
+    if (Number(characters) >= 8 && Number(characters) <= 128) {
+        alert("Your password character count must be at least 8 characters and no more than 128 characters in length.")
+        var characters = prompt("How many characters would you like in your password?")
+    } else {
+
+    }
+
+4) validation that character count is x = 128 > x > 8
+if no, go back to #3
+if yes, move on...
+
+^conditional statement that stores value if it passes validation
+
+5) confirm - lowercase?
+compare against array
+
+confirm("Should your password include lowercase characters?")
+
+6) confirm - uppercase?
+compare against array
+
+confirm("Should your password include uppercase characters?")
+
+7) confirm - numeric?
+compare against array
+
+confirm("Should your password include numeric characters?")
+
+8) confirm - special characters?
+compare against array
+
+confirm("Should your password include special characters?")
+
+9) validate against arrays 5-8
+if none were confirmed, go back to #5
+if at least 1 of 5-8 is returned, move on...
+
+^conditional statement that stores value if it passes validation
+
+var combinedArray = []
+combinedArray.push(...lowercaseChar, ...uppercaseChar, ...numericChar, ...specialChar)
+
+"stored variable of the password".includes(combinedArray) <- check that this validates for anything inside combinedArray
+
+MAYBE USE?
+-
+lowercaseChar.includes()
+uppercaseChar.includes()
+numericChar.includes()
+specialChar.includes()
+-
+
+
+10) random password is generated and stored
+-concatenate all arrays?
+-validated against user's chosen conditions
+
+
+11) random password is displayed via alert or on the page
+
+alert("Your new password is " + password)
