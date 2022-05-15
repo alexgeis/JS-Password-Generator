@@ -30,6 +30,11 @@ header {
   background-color: #4cc9f0;
 }
 
+h1 {
+  margin:0;
+  padding:0;
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
