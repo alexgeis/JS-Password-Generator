@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #c7f9cc;
 }
 
 .wrapper {
@@ -27,12 +27,15 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  background-color: #4cc9f0;
+  background-color: #57cc99;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
 }
 
 h1 {
   margin:0;
-  padding:0;
+  padding:10px 0;
 }
 
 .card {
@@ -79,7 +82,7 @@ h1 {
 
 .btn {
   border: none;
-  background-color: #f72585;
+  background-color: #22577a;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
