@@ -1,10 +1,6 @@
-# JS-Password-Homework
+# Javascript Random Password Generator
 
-Homework 03 - Javascript - Random Password Generator
-
-## Your Task
-
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+This is an application that enables employees to generate random passwords based on criteria that they’ve selected. This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code that you write. It has a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
 ## User Story
 
