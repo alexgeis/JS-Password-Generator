@@ -9,16 +9,24 @@ var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '-', '
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+const lengthInput = document.querySelector("#charLength");
 const lowerBox = document.querySelector("#lowerCase");
 const upperBox = document.querySelector("#upperCase");
 const numberBox = document.querySelector("#number");
 const specialCharBox = document.querySelector("#specialChar");
+console.log({ lengthInput });
 
 var userPass = [];
 var passwordNew = [];
 
 //CHECKBOX GENERATE
-function generatePassword() {}
+function generatePassword() {
+	let passwordLength = lengthInput.value;
+	if (lowerBox.checked === true) userPass = userPass.concat(lowercaseChar);
+	if (upperBox.checked === true) userPass = userPass.concat(uppercaseChar);
+	if (numberBox.checked === true) userPass = userPass.concat(numericChar);
+	if (specialCharBox.checked === true) userPass = userPass.concat(specialChar);
+}
 
 //USER PROMPT GENERATE
 // function generatePassword() {
@@ -76,3 +84,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function logEvent(e) {
+	console.log(e);
+}
+document.body.addEventListener("click", logEvent);
