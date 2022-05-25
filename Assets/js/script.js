@@ -13,7 +13,8 @@ var userPass = [];
 console.log(userPass);
 var passwordNew = [];
 
-//CHECKBOX PROMPT GENERATE
+//CHECKBOX GENERATE
+function generatePassword() {}
 
 //USER PROMPT GENERATE
 // function generatePassword() {
