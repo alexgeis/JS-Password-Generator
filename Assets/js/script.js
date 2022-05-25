@@ -22,10 +22,27 @@ var passwordNew = [];
 //CHECKBOX GENERATE
 function generatePassword() {
 	let passwordLength = lengthInput.value;
+	//user inputs for password character types
 	if (lowerBox.checked === true) userPass = userPass.concat(lowercaseChar);
 	if (upperBox.checked === true) userPass = userPass.concat(uppercaseChar);
 	if (numberBox.checked === true) userPass = userPass.concat(numericChar);
 	if (specialCharBox.checked === true) userPass = userPass.concat(specialChar);
+
+	if (
+		lowerBox.checked == false &&
+		upperBox.checked == false &&
+		numberBox.checked == false &&
+		specialCharBox.checked == false
+	) {
+		// alert("You must choose at least 1 character type.");
+		// generatePassword();
+		return;
+	}
+	//loop through final array of potential characters and randomly select characters until the password length is reached
+	for (var i = 0; i < 1 + characters; i++) {
+		passwordNew += userPass[Math.floor(Math.random() * userPass.length)];
+	}
+	return passwordNew;
 }
 
 //USER PROMPT GENERATE
