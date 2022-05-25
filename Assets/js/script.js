@@ -9,8 +9,12 @@ var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '-', '
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+const lowerBox = document.querySelector("#lowerCase");
+const upperBox = document.querySelector("#upperCase");
+const numberBox = document.querySelector("#number");
+const specialCharBox = document.querySelector("#specialChar");
+
 var userPass = [];
-console.log(userPass);
 var passwordNew = [];
 
 //CHECKBOX GENERATE
