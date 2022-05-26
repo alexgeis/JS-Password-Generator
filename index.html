@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="./Assets/css/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
-    <script src="./Assets/js/script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="./Assets/css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>Password Generator</h1>
+			</header>
+			<div class="card">
+				<div class="card-header">
+					<h2>Generate a Password</h2>
+				</div>
+				<div class="card-body">
+					<button id="copy">copy</button>
+					<textarea
+						readonly
+						id="password"
+						placeholder="Your Secure Password"
+						aria-label="Generated Password"
+					></textarea>
+					<form action="">
+						<fieldset id="charlengthSet">
+							<label for="charLength"
+								>How many characters in your password?</label
+							>
+							<input
+								type="number"
+								name="charLength"
+								id="charLength"
+								value="8"
+								max="128"
+								min="8"
+								placeholder="between 8 and 128 characters"
+							/>
+						</fieldset>
+						<fieldset>
+							<legend>Choose your password character types:</legend>
+
+							<div>
+								<input
+									type="checkbox"
+									id="lowerCase"
+									name="lowerCase"
+									checked
+								/>
+								<label for="lowerCase">Lowercase</label>
+							</div>
+
+							<div>
+								<input type="checkbox" id="upperCase" name="upperCase" />
+								<label for="upperCase">Upper Case</label>
+							</div>
+
+							<div>
+								<input type="checkbox" id="number" name="number" />
+								<label for="number">Numbers</label>
+							</div>
+
+							<div>
+								<input type="checkbox" id="specialChar" name="specialChar" />
+								<label for="specialChar">Special Characters</label>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div id="warningMsg"></div>
+					<button id="generate" class="btn">Generate Password</button>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>
+				©
+				<span id="currentYear"></span>
+				- Alex Geis
+			</p>
+			<a href="https://github.com/alexgeis" target="_blank">
+				<img src="./Assets/images/GitHub-Mark-64px.png" alt="Github logo"
+			/></a>
+		</footer>
+		<script src="./Assets/js/script.js"></script>
+	</body>
 </html>
