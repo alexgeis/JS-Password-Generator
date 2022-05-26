@@ -6,8 +6,11 @@ const uppercaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L
 const numericChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 // prettier-ignore
 const specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '-', '.', '~', '|', '<', '>', '=', '-', '_', '/', ':', ';', '?', '[', ']', '{', '}', '~'];
-
+//date
+const currentYear = document.getElementById("currentYear");
+currentYear.textContent = new Date().getFullYear();
 // DOM Selectors
+const passwordText = document.querySelector("#password");
 const generateBtn = document.querySelector("#generate");
 const lengthInput = document.querySelector("#charLength");
 const lowerBox = document.querySelector("#lowerCase");
@@ -43,7 +46,6 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
 	let password = generatePassword();
-	let passwordText = document.querySelector("#password");
 
 	passwordText.value = password;
 }
@@ -72,6 +74,24 @@ function checkChecked(e) {
 		}, 3000);
 		lastCheckedBox.checked = true;
 	}
+}
+
+//clipboard API
+const btnCopy = document.querySelector("#copy");
+
+btnCopy.addEventListener("click", copy);
+
+function copy() {
+	navigator.clipboard.writeText(passwordText.value).then(
+		function () {
+			passwordText.select();
+			console.log("Async: Copying to clipboard was successful!");
+		},
+		function (err) {
+			alert("Clipboard permissions don't allow copy");
+			console.error("Async: Could not copy text: ", err);
+		}
+	);
 }
 
 function logEvent(e) {
