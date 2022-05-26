@@ -31,6 +31,17 @@ function generatePassword() {
 	passwordNew = "";
 
 	let passwordLength = +lengthInput.value;
+	//validate password length
+	if (passwordLength < 8 || passwordLength > 128) {
+		warningMessage.setAttribute("class", "warning-msg");
+		warningMessage.textContent =
+			"Password length must be greater than 8 characters and no more than 128 characters";
+		const warningMsgCountdown = setTimeout(() => {
+			warningMessage.textContent = "";
+			clearTimeout(warningMsgCountdown);
+		}, 3000);
+		lastCheckedBox.checked = true;
+	}
 	//user inputs for password character types
 	if (lowerBox.checked === true) userPass = userPass.concat(lowercaseChar);
 	if (upperBox.checked === true) userPass = userPass.concat(uppercaseChar);
