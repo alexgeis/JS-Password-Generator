@@ -14,30 +14,57 @@ const lowerBox = document.querySelector("#lowerCase");
 const upperBox = document.querySelector("#upperCase");
 const numberBox = document.querySelector("#number");
 const specialCharBox = document.querySelector("#specialChar");
-console.log({ lengthInput });
+const warningMessage = document.querySelector("#warningMsg");
+//all checkboxes and checked boxes - nodelists converted to arrays
+const checkBoxes = document.querySelectorAll("input[type='checkbox']");
+const checkBoxesArr = Array.from(checkBoxes);
 
 var userPass = [];
 var passwordNew = [];
+console.log(checkBoxesArr);
+for (let i = 0; i < checkBoxesArr.length; i++) {
+	checkBoxesArr[i].addEventListener("change", checkChecked);
+}
+function checkChecked(e) {
+	const lastCheckedBox = e.target;
+	const checkedBoxes = document.querySelectorAll(
+		"input[type='checkbox']:checked"
+	);
+	const checkedBoxesArr = Array.from(checkedBoxes);
+
+	//ensure there is always at least 1 checked box
+	if (checkedBoxesArr.length === 0) {
+		warningMessage.setAttribute("class", "warning-msg");
+		warningMessage.textContent = "You must choose at least 1 character type";
+		const warningMsgCountdown = setTimeout(() => {
+			warningMessage.textContent = "";
+			clearTimeout(warningMsgCountdown);
+		}, 3000);
+		lastCheckedBox.checked = true;
+	}
+}
 
 //CHECKBOX GENERATE
 function generatePassword() {
 	let passwordLength = lengthInput.value;
+	// if (
+	// 	lowerBox.checked == false &&
+	// 	upperBox.checked == false &&
+	// 	numberBox.checked == false &&
+	// 	specialCharBox.checked == false
+	// ) {
+	// 	warningMessage.setAttribute("class", "warning-msg");
+	// 	warningMessage.textContent = "You must choose at least 1 character type";
+	// 	// generatePassword();
+	// 	lowerBox.checked = true;
+	// 	return (passwordNew = "");
+	// }
 	//user inputs for password character types
 	if (lowerBox.checked === true) userPass = userPass.concat(lowercaseChar);
 	if (upperBox.checked === true) userPass = userPass.concat(uppercaseChar);
 	if (numberBox.checked === true) userPass = userPass.concat(numericChar);
 	if (specialCharBox.checked === true) userPass = userPass.concat(specialChar);
 
-	if (
-		lowerBox.checked == false &&
-		upperBox.checked == false &&
-		numberBox.checked == false &&
-		specialCharBox.checked == false
-	) {
-		// alert("You must choose at least 1 character type.");
-		// generatePassword();
-		return;
-	}
 	//loop through final array of potential characters and randomly select characters until the password length is reached
 	for (var i = 0; i < 1 + characters; i++) {
 		passwordNew += userPass[Math.floor(Math.random() * userPass.length)];
