@@ -21,7 +21,7 @@ const checkBoxesArr = Array.from(checkBoxes);
 
 var userPass = [];
 var passwordNew = [];
-console.log(checkBoxesArr);
+
 for (let i = 0; i < checkBoxesArr.length; i++) {
 	checkBoxesArr[i].addEventListener("change", checkChecked);
 }
@@ -46,27 +46,17 @@ function checkChecked(e) {
 
 //CHECKBOX GENERATE
 function generatePassword() {
-	let passwordLength = lengthInput.value;
-	// if (
-	// 	lowerBox.checked == false &&
-	// 	upperBox.checked == false &&
-	// 	numberBox.checked == false &&
-	// 	specialCharBox.checked == false
-	// ) {
-	// 	warningMessage.setAttribute("class", "warning-msg");
-	// 	warningMessage.textContent = "You must choose at least 1 character type";
-	// 	// generatePassword();
-	// 	lowerBox.checked = true;
-	// 	return (passwordNew = "");
-	// }
-	//user inputs for password character types
-	if (lowerBox.checked === true) userPass = userPass.concat(lowercaseChar);
-	if (upperBox.checked === true) userPass = userPass.concat(uppercaseChar);
-	if (numberBox.checked === true) userPass = userPass.concat(numericChar);
-	if (specialCharBox.checked === true) userPass = userPass.concat(specialChar);
+	let passwordLength = +lengthInput.value;
 
+	//user inputs for password character types
+	if (lowerBox.checked === true) userPass.concat(lowercaseChar);
+	if (upperBox.checked === true) userPass.concat(uppercaseChar);
+	if (numberBox.checked === true) userPass.concat(numericChar);
+	if (specialCharBox.checked === true) userPass.concat(specialChar);
 	//loop through final array of potential characters and randomly select characters until the password length is reached
-	for (var i = 0; i < 1 + characters; i++) {
+	console.log({ userPass });
+	console.log({ passwordLength });
+	for (let i = 0; i <= passwordLength; i++) {
 		passwordNew += userPass[Math.floor(Math.random() * userPass.length)];
 	}
 	return passwordNew;
@@ -132,4 +122,4 @@ generateBtn.addEventListener("click", writePassword);
 function logEvent(e) {
 	console.log(e);
 }
-document.body.addEventListener("click", logEvent);
+// document.body.addEventListener("click", logEvent);
