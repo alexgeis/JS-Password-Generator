@@ -123,7 +123,7 @@ This is an example of how to list things you need to use the software and how to
 
 Using the inputs, the user can designate their preference for included characters in their final password.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -131,10 +131,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] History of created passwords
+- [ ] Dark/Light theme toggle
+- [ ] Add back-end server
 
 <!-- See the [open issues](https://github.com/alexgeis/JS-Password-Generator/issues) for a full list of proposed features (and known issues). -->
 
