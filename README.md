@@ -42,7 +42,7 @@ Repo: [JS Random Password Generator - Alex Geis Github](https://github.com/alexg
 
 GitHub Pages URL: [JS Random Password Generator](https://alexgeis.github.io/JS-Password-Homework/)
 
-Screenshot: ![The Password Generator application displays a red button to "Generate Password".](./Assets/password-generator-screenshot1.png)
+<!-- Screenshot: ![The Password Generator application displays a red button to "Generate Password".](./Assets/password-generator-screenshot1.png) -->
 
 <div id="top"></div>
 <!--
@@ -80,11 +80,11 @@ Screenshot: ![The Password Generator application displays a red button to "Gener
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/alexgeis/JS-Password-Generator">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/alexgeis/JS-Password-Generator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/alexgeis/JS-Password-Generator/issues">Request Feature</a>
   </p>
 </div>
 
@@ -263,7 +263,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/github_username/repo_name/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[license-url]: https://github.com/alexgeis/JS-Password-Generator/blob/main/license.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alexngeis/
 [product-screenshot]: ./Assets/password-generator-screenshot1.png
