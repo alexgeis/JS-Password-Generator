@@ -134,6 +134,7 @@ Using the inputs, the user can designate their preference for included character
 - [ ] History of created passwords
 - [ ] Dark/Light theme toggle
 - [ ] Add back-end server
+- [ ] refactor JS with revealing module pattern
 
 <!-- See the [open issues](https://github.com/alexgeis/JS-Password-Generator/issues) for a full list of proposed features (and known issues). -->
 
